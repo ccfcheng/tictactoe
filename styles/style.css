@@ -1,0 +1,57 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  /*padding: 5%;*/
+  background-color: white;
+}
+
+.header {
+  width: 320px;
+  height: 50px;
+  font-size: 30px;
+  padding: 10px 0px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.board {
+  width: 320px;
+  height: 320px;
+  background-color: white;
+  border: 1px solid black;
+}
+
+.cell {
+  width: 106px;
+  height: 106px;
+  border: 1px solid black;
+  float: left;
+  text-align: center;
+  font-size: 90px;
+}
+
+.result {
+  width: 320px;
+  height: 50px;
+  font-size: 20px;
+  padding: 5px;
+}
+
+.footer {
+  width: 320px;
+  height: 40px;
+  margin: 10px 0px;
+  text-align: center;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <title>Tic Tac Toe - Demo</title>
+    <link rel="stylesheet" href="bower_components/normalize.css/normalize.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="live.js"></script>
+    <script src="app.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+
+  <body ng-app="TicTacToe">
+
+    <div class="wrapper" ng-controller="MainController">
+      <div class="header">It is {{ turn }}'s turn</div>
+      <!-- This is the active version of the board that is clickable -->
+      <div class="board" ng-show="isActive">
+        <div class="cell" ng-repeat="item in board track by $index" ng-click="add($index)">{{ item }}</div>
+      </div>
+      <div class="result" ng-show="isActive"></div>
+      <!-- this is the nonactive version of the board displayed after a win or draw -->
+      <div class="board" ng-show="!isActive">
+        <div class="cell" ng-repeat="item in board track by $index">{{ item }}</div>
+      </div>
+      <div class="result" ng-show="!isActive">{{ result }}</div>
+      <div class="footer">
+        <button ng-click="reset()">New Game</button>
+      </div>
+    </div>
+
+  </body>
+
+</html>
